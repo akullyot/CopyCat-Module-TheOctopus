@@ -1,0 +1,85 @@
+/* importing logo fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+/* root for colors, etc */
+:root
+{
+    --off-black:  rgb(24, 23, 23);
+    --highlighter-yellow: #fcf113;
+    --grey: #757575;
+    --dark-grey: #262c30;
+    --light-grey: #f1f1f1;
+
+}
+body
+{
+    font-family: "Montserrat";
+}
+a
+{
+    text-decoration: none;
+    color: var(--dark-grey);
+}
+ul
+{
+    list-style-type: none;
+}
+/*top navbar */
+#top-nav
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+#top-nav span
+{
+    font-size: 20px;
+}
+#top-nav >ul
+{
+    display: flex;
+    justify-content: flex-end;
+}
+#top-nav button
+{
+    background-color: white;
+    border: none;
+    color: var(--off-black);
+    padding: 2px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#top-nav button:hover
+{
+    opacity: .6;
+    cursor: pointer;
+}
+/*language dropdown */
+#button-dropdown-language-container
+{
+    display: none;
+    position: absolute;
+    top: 55px;
+    background-color: var(--lightgrey);
+    min-width: 190px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#button-dropdown-language-container ul
+{
+   margin: 0px;
+   padding: 0px 20px;
+}
+#button-dropdown-language-container li
+{
+    margin: 10px 0px;
+}
+
+.flag-image
+{
+    width: 30px;
+    height: 25px;
+    padding: 5px;
+    margin-bottom: -10px;
+}
+/*Fixing upon resizing using flex*/

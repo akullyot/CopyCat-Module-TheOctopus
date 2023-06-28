@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assests\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <title>Mockup of The Octopus</title>
+</head>
+<body>
+    <nav id="top-nav">
+        <span> IDEO </span>
+        <ul>
+            <button id ="button-dropdown-language" onclick="dropDown('button-dropdown-language-container', this);">
+                <i class="fa fa-globe dropdown" aria-hidden="true"></i>
+                <i class="fa fa-caret-down dropdown"></i>
+            </button>
+            <div id="button-dropdown-language-container" class = "dropdown">
+                <ul>
+                    <li>
+                        <a href= "">
+                            <img class = "flag-image" alt="china-flag" src = "assests\images\china-flag-twitter-emoji.png">
+                             CHINA
+                        </a>
+                    </li>
+                    <li>
+                        <a href = ""> 
+                            <img class ="flag-image" alt="eu-flag" src = "assests\images\eu-flag-twitter-emoji.png">
+                            EUROPE 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class = "flag-image" alt="japan-flag" src = "assests\images\japan-flag-twitter-emoji.png">
+                            JAPAN
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button id="button-search">
+                <i class="fa fa-search"></i>
+            </button>
+            <button id="button-hamburger">
+                <i class="fa fa-bars"></i>
+            </button>
+        </ul>
+    </nav>
+
+    <section id="banner">
+    </section>
+    <main>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+<script>
+    //adding dropdown functionality for the top-nav language button
+    function dropDown(containerId, button)
+    {
+        //show the dropdown
+        document.getElementById(containerId).style.display = "block";
+        //change the carat
+        button.innerHTML = `<i class="fa fa-globe" aria-hidden="true"></i><i class="fa fa-caret-up"></i>`
+    }
+    //on any clickoff remove the dropdown
+    //anything that doesn't have the class "dropdown upon being clicked will close the dropdown"
+    window.onclick = function(event)
+    {
+        if (!event.target.matches('.dropdown')) 
+        {
+            document.getElementById("button-dropdown-language-container").style.display = "";
+            document.getElementById("button-dropdown-language").innerHTML = `<i class="fa fa-globe dropdown" aria-hidden="true"></i><i class="fa fa-caret-down dropdown"></i>`
+        }
+    }
+</script>
+</html>
