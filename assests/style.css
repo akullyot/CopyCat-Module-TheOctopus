@@ -118,9 +118,8 @@ h1
 {
     font-family: Sentinel SSm A,Sentinel SSm B,Georgia,serif;
     font-weight: 300;
-    font-size: 120px;
-    padding: 0px;
-    margin: 20px;
+    font-size: 8.5em;
+    padding: 0px 20px;
 }
 #banner-title h2
 {
@@ -131,7 +130,7 @@ h1
     position: absolute;
     z-index: 1;
     left: calc(100% - 120px);
-    top: 103px;
+    top: 283px;
     opacity: .95;
     height: 250px;
     width: 240px;
@@ -197,6 +196,7 @@ nav.main-nav
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-left: 10px;
 }
 .main-nav li
 {
@@ -657,7 +657,6 @@ footer
     font-family: "Montserrat";
     text-transform: uppercase;
     font-size: 22px;
-
 }
 #footer-links li
 {
@@ -759,5 +758,123 @@ footer
     }
 }
 /*Fixing upon resizing using flex*/
-
+@media (max-width: 1400px) 
+{
+    #banner-title
+    {
+        position: inherit;
+        padding: 10px;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        flex-direction: column;
+    }
+    #banner-title img 
+    {
+        position: absolute;
+        z-index: 1;
+        left: calc(100% - 320px);
+        top: 280px;
+        height: 150px;
+        width: 140px;
+    }
+    #bottom-hero
+    {
+        position: inherit;
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;   
+    }
+    #about-us
+    {
+        width: 100%;
+    }
+    #image-credit
+    {
+        width:100%;
+    }
+    .main-nav ul
+    {
+        flex-direction: column;
+    }
+    .main-nav li
+    {
+        padding-bottom: 20px;
+    }
+    #main-articles-holder
+    {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    div#sixty-page-column-left
+    {
+        width:100%;
+    }
+    div#thirtyfive-page-column-right
+    {
+        width:100%;
+        margin-top: 30px;
+    } 
+    .grid
+    {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: space-between;
+        margin-top: 50px;
+    } 
+    .half-grid-child
+    {
+        width: 100%;
+    }  
+    .third-grid-child
+    {
+        width: 100%;
+    }  
+    #newsletter-signup input[type="email"]
+    {
+        width: 100%;
+        margin-left:0px;
+    }
+    #newsletter-signup input[type="submit"]
+    {
+        width: 100%;
+        margin-left: 0px;
+    }
+    #footer-links
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #footer-links ul
+    {
+        width: 100%;
+    }
+    #footer-social ul
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #footer-copyright ul
+    {
+        flex-direction: column;
+    }
+    #footer-copyright li
+    {
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 660px)
+{
+    h1
+    {
+        /*overflows on phones */
+        font-size: 40px;
+    }
+} 
 /* on resize move the about and illustration credit to the bottom */
